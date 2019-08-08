@@ -1,0 +1,11 @@
+<div class="card mt-2" *ngFor="let cliente of clientes | async">
+  <div class="card-body">
+    <h5 class="card-title">{{cliente.nome}}</h5>
+    <p class="card-text">{{cliente.cnpj}}</p>
+    <p class="card-text">{{cliente.telefone}}</p>
+  </div>
+  <div class="card-footer">
+    <button type="button" class="btn btn-default" (click)="edit(cliente, cliente.key)">Editar</button>
+    <button type="button" class="btn btn-danger ml-2" (click)="delete(cliente.key)">Excluir</button>
+  </div>
+</div>
