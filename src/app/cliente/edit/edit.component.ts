@@ -27,9 +27,6 @@ export class EditComponent implements OnInit {
   }
 
   enviar() {
-    alert(JSON.stringify(this.cliente));
-    console.log('submit');
-
     if (this.key) {
       this.clienteService.update(this.cliente, this.key);
     } else {
